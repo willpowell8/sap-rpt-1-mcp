@@ -8,10 +8,10 @@
   },
   "server": {
     "type": "node",
-    "entry_point": "index.js",
+    "entry_point": "build/index.js",
     "mcp_config": {
       "command": "node",
-      "args": ["${__dirname}/index.js"],
+      "args": ["${__dirname}/build/index.js"],
       "env": {
         "SAP_RPT1_API_KEY": "${user_config.sap_rpt1_api_key}"
       }

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "sap-rpt-1": {
+      "command": "node",
+      "args": ["/absolute/path/to/sap-rpt-1-mcp/build/index.js"],
+      "env": {
+        "SAP_RPT1_API_KEY": "your-api-key-from-https://rpt.cloud.sap/docs"
+      }
+    }
+  }
+}
