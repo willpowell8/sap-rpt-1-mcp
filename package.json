@@ -1,0 +1,20 @@
+{
+  "name": "sap-rpt-1-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for SAP-RPT-1 prediction API",
+  "type": "module",
+  "bin": {
+    "sap-rpt-1-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && node -e \"const fs = require('fs'); const path = './build/index.js'; let content = fs.readFileSync(path, 'utf8'); if (!content.startsWith('#!')) { fs.writeFileSync(path, '#!/usr/bin/env node\\n' + content); fs.chmodSync(path, '755'); }\"",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2"
+  }
+}
