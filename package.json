@@ -8,7 +8,8 @@
   },
   "scripts": {
     "build": "tsc && node -e \"const fs = require('fs'); const path = './build/index.js'; let content = fs.readFileSync(path, 'utf8'); if (!content.startsWith('#!')) { fs.writeFileSync(path, '#!/usr/bin/env node\\n' + content); fs.chmodSync(path, '755'); }\"",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "bundle": "node scripts/create-bundle.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.4"

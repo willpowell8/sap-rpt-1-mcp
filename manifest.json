@@ -1,0 +1,29 @@
+{
+  "manifest_version": "0.2",
+  "name": "SAP RPT 1",
+  "version": "1.0.0",
+  "description": "MCP server for SAP-RPT-1 prediction API",
+  "author": {
+    "name": "Will"
+  },
+  "server": {
+    "type": "node",
+    "entry_point": "index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/index.js"],
+      "env": {
+        "SAP_RPT1_API_KEY": "${user_config.sap_rpt1_api_key}"
+      }
+    }
+  },
+  "user_config": {
+    "sap_rpt1_api_key": {
+      "type": "string",
+      "title": "SAP-RPT-1 API Key",
+      "description": "Your API key for SAP-RPT-1 prediction service authentication",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}

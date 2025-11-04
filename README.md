@@ -15,7 +15,22 @@ An MCP (Model Context Protocol) server for the SAP-RPT-1 prediction API. This se
 
 ## Installation
 
-### Option 1: Install from Local Directory
+### Option 1: Claude Desktop Extensions Bundle (Easiest)
+
+Create a ready-to-install bundle for Claude Desktop:
+
+```bash
+npm install
+npm run bundle
+```
+
+This creates `sap-rpt-1-mcp-bundle.zip` containing everything needed. To install:
+1. Extract the zip file to a permanent location
+2. Get your API key from https://rpt.cloud.sap/docs
+3. Follow the instructions in `INSTALL.md` inside the bundle
+4. Restart Claude Desktop
+
+### Option 2: Install from Local Directory
 
 1. Clone or download this repository
 2. Install dependencies and build:
@@ -25,7 +40,7 @@ npm install
 npm run build
 ```
 
-### Option 2: Install Globally
+### Option 3: Install Globally
 
 ```bash
 npm install -g .
@@ -175,6 +190,26 @@ sap-rpt-1-mcp/
 ```bash
 npm run build
 ```
+
+### Creating Distribution Bundle
+
+To create a distributable bundle for Claude Desktop Extensions:
+
+```bash
+npm run bundle
+```
+
+This will:
+1. Build the TypeScript source
+2. Install production dependencies
+3. Create a manifest file
+4. Package everything into `sap-rpt-1-mcp-bundle.zip`
+
+The bundle includes:
+- Pre-built server code
+- All production dependencies
+- Installation instructions
+- Configuration examples
 
 ### Testing
 
